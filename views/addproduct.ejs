@@ -8,7 +8,7 @@
    
     <div class="container">
         <div class="content">
-        <form method='POST' action="<%= edit ? '/products/edit' : '/products/add' %>">
+        <form method='POST' action="<%= edit ? '/products/edit' : '/products/add' %>" enctype="multipart/form-data">
             <% if(edit) { %>
                 <input type="hidden" name="productId" value="<%= product.id %>">
             <% } %>
@@ -81,7 +81,7 @@
             </div>
 
             <!-- <div class="input-box">
-            <input type="file" name="photos" style="padding-top:12px">
+            <input type="file" name="model" style="padding-top:12px">
             <label>Add Model</label>
             </div> -->
 

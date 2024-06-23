@@ -3,6 +3,8 @@ const { saveProducts, fetchAllProducts, getProductById, updateProductById, delet
 const Product = require("../../models/ProductModel");
 const Category = require("../../models/CategoryModel");
 const User = require("../../models/UserModel");
+const multer = require("multer");
+
 
 exports.getAddProductPage = (req, res) => {
     Category.findAll({attributes: ['id', 'title']})
@@ -30,8 +32,10 @@ exports.postAddProductPage = (req, res) => {
         Initialprice: req.body.Initialprice,
         price: req.body.price,
         description: req.body.description,
-        image: req.body.image
+        image: req.file.originalname
     };
+
+    
     
     let categoryObj;
 
@@ -50,22 +54,6 @@ exports.postAddProductPage = (req, res) => {
         console.log(error);
     });
 
-    // const productObj = Product.build(product);
-    // productObj.save()
-    // .then(() => {
-    //     res.redirect('/');
-    // })
-    // .catch((error) => {
-    //     console.log(error);
-    // });
-
-    // Product.create(product)
-    // .then(() => {
-    //     res.redirect('/');
-    // }).catch((error) => {
-    //     console.log(error);
-    // });
-    
 };
 
 exports.getAdminProductPage = (req, res) => {

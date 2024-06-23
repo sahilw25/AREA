@@ -22,11 +22,10 @@ const Cart = require('./models/CartModel.js');
 const CartItem = require('./models/CartItemModel.js');
 const Order = require('./models/OrderModel.js');
 const OrderItem = require('./models/OrderItemModel.js');
-const fileUpload = require("express-fileupload");
+// const fileUpload = require("express-fileupload");
 const multer = require("multer");
 
 const app = express();
-
 
 
 
@@ -38,7 +37,7 @@ app.set('views', 'views');
 app.use(express.static(path.join(rootDir, 'public')));
 app.use('/css', express.static(path.join(rootDir, 'node_modules', 'bootstrap', 'dist', 'css', 'public')));
 
-
+// app.use(fileUpload());
 
 
 app.use(bodyParser.urlencoded({extended:false}));
