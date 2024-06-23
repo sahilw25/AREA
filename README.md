@@ -7,3 +7,5 @@ steps to run the app
 3. navigate to Area
 4. type "npm start" in the terminal and enter
    
+
+check for the latest version in branch
