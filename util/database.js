@@ -1,7 +1,7 @@
 const { Sequelize } = require("sequelize");
 
 
-const sequelize = new Sequelize('node-ecom-app', 'root', '', {
+const sequelize = new Sequelize('AREA', 'root', '', {
     dialect:'mysql',
     host: 'localhost'
 });

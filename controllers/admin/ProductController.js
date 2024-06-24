@@ -25,14 +25,17 @@ exports.getAddProductPage = (req, res) => {
 
 exports.postAddProductPage = (req, res) => {
     const categoryId = req.body.categoryId;
+    
+    const imageFile = req.files['image'] ? req.files['image'][0].originalname : null;
+    const moddelFile = req.files['model'] ? req.files['model'][0].originalname : null;
 
     const product = {
         title: req.body.title,
-        imageurl: req.body.imageurl,
+        model: moddelFile,
         Initialprice: req.body.Initialprice,
         price: req.body.price,
         description: req.body.description,
-        image: req.file.originalname
+        image: imageFile
     };
 
     
