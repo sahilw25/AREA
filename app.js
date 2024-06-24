@@ -98,7 +98,11 @@ sequelize
   });
 
 
+const options={
+    key: fs.readFileSync('keys/server.key'),
+    cert: fs.readFileSync('keys/server.crt')
+}
 
-app.listen(3030, ()=> {
-    console.log("server started at port 3030");
+https.createServer(options, app).listen (3000, function () {
+console.log("Server is running on localhost3000");
 });
