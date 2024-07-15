@@ -20,11 +20,11 @@
         <div class="box">
                       <div class="images">
                           <div class="img-holder active">
-                            <model-viewer src="/images/uploaded_images/<%= product.model%>"
-                            shadow-intensity="1"
-                            camera-controls
-                            auto-rotate ar
-                            ></model-viewer>
+                            <model-viewer id="shoe" camera-controls touch-action="pan-y" src="/images/uploaded_images/<%= product.model  %>" tone-mapping="neutral" ar alt="A 3D model of a Shoe">
+                                <div class="controls">
+                                  <div>Variant: <select id="variant"></select></div>
+                                </div>
+                              </model-viewer>
                           </div>
                           <div class="img-holder">
                               
@@ -38,7 +38,7 @@
                               
                           </div>
                           <span>&#x20b9 <%= product.price %></span>
-                          <span class="line" style="margin-left: 5px;text-decoration: line-through; font-weight: 500; font-size: 19px; color: hsl(0, 0%, 44%);">&#x20b9 10999</span>
+                          <span class="line" style="margin-left: 5px;text-decoration: line-through; font-weight: 500; font-size: 19px; color: hsl(0, 0%, 44%);">&#x20b9 <%= product.Initialprice %></span>
                           <div class="options">
                               <a href="#">BUY NOW</a>
                               <a href="">
@@ -47,12 +47,13 @@
                           </div>
                       </div>
                       <div class="description">
+                        <p><%= product.id  %></p>
                           <h4>Description</h4>
                           <p><%= product.description  %></p>
                           <ul class="features">
-                              <li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Retailer : <%= product.User.name %></li>
+                              <li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Retailer :uuuuu</li>
                               <li><i class="fa fa-user-circle-o" aria-hidden="true"></i>Designer : unknown</li>
-                              <li><i class="fa fa-futbol-o" aria-hidden="true"></i>Type : <%= product.category.title %></li>
+                              <li><i class="fa fa-futbol-o" aria-hidden="true"></i>Type : uuuu</li>
                           </ul>
                           <ul class="social">
                               
@@ -62,8 +63,9 @@
   
           
       </div>
-  </body>
-  </html>  
+ 
+<script src="/script/variant.js"></script>
+      
 
 
 <%- include('includes/footer.ejs') %>

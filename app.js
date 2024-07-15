@@ -7,7 +7,9 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const rootDir = require('./util/path.js');
-
+const session = require('express-session');
+const bcrypt = require('bcryptjs');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
 const adminRoutes = require('./routes/admin');
@@ -41,6 +43,21 @@ app.use('/css', express.static(path.join(rootDir, 'node_modules', 'bootstrap', '
 
 
 app.use(bodyParser.urlencoded({extended:false}));
+
+const store = new SequelizeStore({ db: sequelize });
+app.use(session({
+  secret: 'your secret key',
+  store: store,
+  resave: false,
+  saveUninitialized: false,
+  cookie: { maxAge: 30 * 60 * 1000 } // 30 minutes
+}));
+store.sync();
+
+app.use((req, res, next) => {
+  res.locals.session = req.session;
+  next();
+});
 
 app.use((req, res, next) => {
   User.findByPk(1)
@@ -83,14 +100,14 @@ Order.belongsTo(User);
 Order.belongsToMany(Product, {through: OrderItem})
 
 sequelize
-  .sync()
+  .sync({alter:true})
   .then((result) => {
     return User.findByPk(1);
     // console.log(result);
   })
   .then((user) => {
     if(! user){
-      User.create({name: 'Sahil', email: 'sahil@gmail.com'});
+      User.create({name: 'Sahil', email: 'sahil@gmail.com', mobile:'9403094516', password:'111'});
     }
   })
   .catch((error) => {

@@ -16,19 +16,23 @@
     </a>
 
     <div class="header-actions">
-
+      <% if (!session.userId) { %>
       <button class="header-action-btn">
         <i class="fa fa-user" aria-hidden="true"></i>
-                    <a href=#><p class='header-action-label'>Sign in</p></a>
-          
+        <a href="/login"><p class='header-action-label'>Login</p></a>
       </button>
-
-            <a href='logout.php'>
+      <% }else{%>
+        <button class="header-action-btn">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <a href=""><p class='header-action-label'><%= session.name %></p></a>
+        </button>
+            <a href="/logout">
                 <div class='logout'>
                 <i class='fa fa-telegram' aria-hidden='true'></i>
                 <p>Log-Out</p>
                 </div>
             </a>
+            <% } %>
       
     </div>
 

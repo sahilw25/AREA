@@ -8,7 +8,7 @@ exports.getHomePage = (req, res) =>{
 
     Product.findAll({include: [{model : Category}, {model : User}]})
     .then((products) => {
-        console.log(products);
+        // console.log(products);
         const viewsdata = {
             admin: false,
             products,
@@ -24,7 +24,7 @@ exports.getHomePage = (req, res) =>{
 exports.getProductDetailPage = (req, res) => {
     const productId = req.params.productId;
 
-    Product.findAll({include: [{model : Category}, {model : User}]}, {where: {id: productId}})
+    Product.findAll({where: {id: productId}})
     .then((product) => {
         const viewsdata = {
             product: product[0],

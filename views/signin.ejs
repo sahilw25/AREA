@@ -1,0 +1,50 @@
+<%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="/css/signin.css">
+
+</head>
+<body>
+    <div class="con">
+        <div class="wrapper">
+            <img src="/images/AREA logo.png" alt="">
+            <form method="POST" action="/signin" >
+                <h2>Sign-in</h2>
+                <div class="field name">
+                    <div class="input-area">
+                        <input type="text" placeholder="Name" name="name" id="name" autocomplete="off" required>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">Name can't be blank</div>
+                </div>
+                <div class="field email">
+                    <div class="input-area">
+                        <input type="text" placeholder="E-mail" name="email" id="email" required>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">E-mail can't be blank</div>
+                </div>
+
+                <div class="field mobile">
+                    <div class="input-area">
+                        <input type="number"  maxlength="10" placeholder="Mobile No" name="mobile" id="mobile" required>
+                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                        <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">Mobile number can't be blank</div>
+                </div>
+
+                <div class="field password">
+                    <div class="input-area">
+                        <input type="Password"  placeholder="Password" name="password" id="password" required>
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">Password can't be blank</div>
+                </div>
+                <input type="submit" value="submit" name="submit">
+            </form>
+            
+        </div>
+    </div>
+<%- include('includes/footer.ejs') %>

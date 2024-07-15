@@ -1,0 +1,244 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.7.33",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_variants"
+    ],
+    "extensions" : {
+        "KHR_materials_variants" : {
+            "variants" : [
+                {
+                    "name" : "BlackWood"
+                },
+                {
+                    "name" : "LightWood"
+                },
+                {
+                    "name" : "OrangeWood"
+                },
+                {
+                    "name" : "NormalWood"
+                }
+            ]
+        }
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "wooden chair_chair_texure_0"
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "BlackWood",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "LightWood",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "orangeWood",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 2
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "NormalWood",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 3
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "wooden chair_chair_texure_0.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "extensions" : {
+                        "KHR_materials_variants" : {
+                            "mappings" : [
+                                {
+                                    "material" : 0,
+                                    "variants" : [
+                                        0
+                                    ]
+                                },
+                                {
+                                    "material" : 1,
+                                    "variants" : [
+                                        1
+                                    ]
+                                },
+                                {
+                                    "material" : 2,
+                                    "variants" : [
+                                        2
+                                    ]
+                                },
+                                {
+                                    "material" : 3,
+                                    "variants" : [
+                                        3
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "indices" : 3,
+                    "material" : 3
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        },
+        {
+            "sampler" : 0,
+            "source" : 2
+        },
+        {
+            "sampler" : 0,
+            "source" : 3
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "blackWood",
+            "uri" : "blackWood.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "parallelWoods",
+            "uri" : "parallelWoods.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "orangeWood",
+            "uri" : "orangeWood.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "lightwoods",
+            "uri" : "lightwoods.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 12379,
+            "max" : [
+                40.18502426147461,
+                141.27032470703125,
+                122.43724060058594
+            ],
+            "min" : [
+                -40.18501281738281,
+                0.00829249620437622,
+                -80.91875457763672
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 12379,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 12379,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 45150,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 148548,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 148548,
+            "byteOffset" : 148548
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 99032,
+            "byteOffset" : 297096
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 90300,
+            "byteOffset" : 396128
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 486428,
+            "uri" : "Voltaire.bin"
+        }
+    ]
+}

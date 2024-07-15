@@ -3,6 +3,7 @@ const router = express.Router();
 const { getHomePage, getProductDetailPage } = require('../controllers/HomeController');
 const { getCartPage, postCartPage, deleteCartItem } = require('../controllers/cartController');
 const { postOrderPage, getOrderPage } = require('../controllers/OrderController');
+const { getLogiinPage, getsigninPage, postsignin, postlogin, logout } = require('../controllers/UserController');
 
 router.get('/', getHomePage);
 router.get('/product/details/:productId', getProductDetailPage);
@@ -12,5 +13,9 @@ router.get('/cart', getCartPage);
 router.post('/cart/delete-item', deleteCartItem);
 router.post('/order', postOrderPage);
 router.get('/order', getOrderPage);
-
+router.get('/login',getLogiinPage);
+router.get('/signin',getsigninPage);
+router.post('/signin', postsignin);
+router.post('/login', postlogin);
+router.get('/logout', logout)
 module.exports = router;    

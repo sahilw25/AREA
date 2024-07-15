@@ -1,0 +1,36 @@
+    <%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    
+    <div class="con">
+        <div class="wrapper">
+            <div class="img-container">
+                <img src="/images/AREA logo.png" alt="AREA logo">
+            </div>
+            <form method="POST" action="/login">
+                <h2>Login</h2>
+                <div class="field email">
+                    <div class="input-area">
+                        <input type="text" placeholder="Email Address" name="email" id="email" required>
+                        <i class="icon fas fa-envelope"></i>
+                        <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">Email can't be blank</div>
+                </div>
+                <div class="field password">
+                    <div class="input-area">
+                        <input type="password" placeholder="Password" name="password" id="password" required>
+                        <i class="icon fas fa-lock"></i>
+                        <i class="error error-icon fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="error error-txt">Password can't be blank</div>
+                </div>
+                <div class="pass-txt"><a href="files/frogot_password/forgot.html">Forgot password?</a></div>
+                <input type="submit" value="Login" name="login">
+            </form>
+            <div class="sign-txt">Not yet a member? <a href="/signin">Signup now</a></div>
+        </div>
+    </div>
+    <%- include('includes/footer.ejs') %>
+
