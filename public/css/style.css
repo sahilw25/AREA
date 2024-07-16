@@ -32,7 +32,7 @@
     box-shadow: 5px 5px 10px 1px rgb(0, 0, 0, 12%);
     padding: 45px;
     margin: 15px 0;
-    width: 950px;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto 1fr;
@@ -43,9 +43,46 @@
 }
 
 model-viewer{
-    width: 330px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
 }
+
+/* CSS */
+.button-35 {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1;
+  margin: 2px;
+  outline: none;
+  padding: 0.4rem 0.8rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-35:hover {
+  box-shadow: #121212 0 0 0 2px, transparent 0 0 0 0;
+}
+
+
+
+
 
 .controls{
     padding-top: 10%;
@@ -163,7 +200,7 @@ model-viewer{
 
 @media (max-width: 991px) {
     .box {
-        width: 750px;
+        width: 90%;
         grid-template-areas: 
         "info info"
         "images description";
@@ -187,7 +224,7 @@ model-viewer{
 
 @media (max-width: 768px) {
     .box {
-        width: 600px;
+        width: 90%;
         grid-template-areas: 
         "images info"
         "description description";
@@ -197,6 +234,9 @@ model-viewer{
     }
     .box .images .img-holder img {
         border-radius: 5px;
+    }
+    .colors{
+        margin-top: 15px;
     }
 }
 
@@ -213,5 +253,13 @@ model-viewer{
         "images"
         "info"
         "description";
+    }
+
+    model-viewer{
+        width: 350px;
+        height: 300px;
+    }
+    .colors{
+        margin-top: 15px;
     }
 }
